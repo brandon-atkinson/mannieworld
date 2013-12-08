@@ -33,7 +33,7 @@ class Mannie
    end
 
    def draw
-      @image.draw_rot(@x, @y, 1, @angle)
+      @image.draw_rot(@x, @y, 1, @angle, 0.5, 0.5, 0.25, 0.25)
    end
    
 end
