@@ -5,6 +5,8 @@ class MannieWorld < Gosu::Window
    def initialize 
       super 1024, 768, false
       self.caption = "Mannie World"
+      
+      @background_image = Gosu::Image.new(self, "images/sunny-sky.png", true)
 
       @mannie = Mannie.new(self)
       @mannie.warp(512, 384)
@@ -26,12 +28,13 @@ class MannieWorld < Gosu::Window
 
    def draw
       @mannie.draw
+      @background_image.draw(0,0,0)
    end
-end
 
-def button_down(id)
-   if id == Gosu::KbEscape
-      close
+   def button_down(id)
+      if id == Gosu::KbEscape
+         close
+      end
    end
 end
 
