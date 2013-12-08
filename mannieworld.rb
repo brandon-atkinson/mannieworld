@@ -1,4 +1,5 @@
 require 'gosu'
+require_relative 'mannie'
 
 class MannieWorld < Gosu::Window
    def initialize 
@@ -34,5 +35,5 @@ def button_down(id)
    end
 end
 
-window = GameWindow.new
+window = MannieWorld.new
 window.show

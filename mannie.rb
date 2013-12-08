@@ -1,8 +1,12 @@
 class Mannie
    def initialize(window)
-      @image = Gosu::Image.new(window, "C:\Users\brandon\Desktop\mannie-head.png", false)
+      @image = Gosu::Image.new(window, "images/mannie-head.png", false)
       @x = @y = @vel_x = @vel_y = @angle = 0.0
       @score = 0
+   end
+
+   def warp(x, y)
+      @x, @y = x, y
    end
 
    def turn_left
